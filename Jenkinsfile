@@ -18,7 +18,7 @@ pipeline{
        }
      stage('deploy'){
         steps{
-       sh  java -cp target/jltsecurity-1.0-SNAPSHOT.jar com.mycompany.app.App
+       sh  '/var/lib/jenkins/workspace/hello-wordpfe/ java -cp target/jltsecurity-1.0-SNAPSHOT.jar com.mycompany.app.App'
         }
        }
     }
