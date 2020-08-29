@@ -1,5 +1,8 @@
 pipeline{
   agent any
+    docker{
+      image 'userpfe/hopejohnhub:devopspfe1.0.0'
+       }
     stages{
       stage('build'){
         steps{
@@ -18,7 +21,7 @@ pipeline{
        }
      stage('deploy'){
         steps{
-       sh  'com.mycompany.app.App java'
+       sh  'userpfe/hopejohnhub:devopspfe1.0.0'
         }
        }
     }
