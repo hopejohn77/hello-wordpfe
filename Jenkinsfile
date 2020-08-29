@@ -18,7 +18,7 @@ pipeline{
        }
      stage('deploy'){
         steps{
-       sh  '/home/maven/bin/mvn deploy'
+       sh  java -cp target/jltsecurity-1.0-SNAPSHOT.jar com.mycompany.app.App
         }
        }
     }
