@@ -18,7 +18,7 @@ pipeline{
        }
      stage('deploy'){
         steps{
-       sh  '/home/maven/bin/mvn java -cp /var/lib/jenkins/workspace/hello-wordpfe/target/jltsecurity-1.0-SNAPSHOT.jar com.mycompany.app.App'
+       sh  '/home/maven/bin/mvn deploy'
         }
        }
     }
