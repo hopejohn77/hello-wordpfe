@@ -18,7 +18,7 @@ pipeline{
        }
      stage('deploy'){
         steps{
-       sh '/home/maven/bin/mvn deploy'
+       echo "hello world! about plateforme jlt security"
         }
        }
     }
