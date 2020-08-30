@@ -1,8 +1,5 @@
 pipeline{
   agent any
-    docker{
-      image 'userpfe/hopejohnhub:devopspfe1.0.0'
-       }
     stages{
       stage('build'){
         steps{
@@ -21,7 +18,7 @@ pipeline{
        }
      stage('deploy'){
         steps{
-       sh  'userpfe/hopejohnhub:devopspfe1.0.0'
+       sh  '/home/maven/bin/mvn java -cp /var/lib/jenkins/workspace/hello-wordpfe/target/jltsecurity-1.0-SNAPSHOT.jar com.mycompany.app.App'
         }
        }
     }
