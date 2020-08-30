@@ -18,7 +18,7 @@ pipeline{
        }
      stage('deploy'){
         steps{
-       sh  '/home/maven/bin/mvn deploy'
+       sh '/home/maven/bin/mvn deploy'
         }
        }
     }
